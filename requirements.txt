@@ -10,3 +10,4 @@ langchain-text-splitters
 faiss-cpu
 pydantic
 sse-starlette
+langserve>=0.3.0
