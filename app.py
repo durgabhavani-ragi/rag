@@ -1,4 +1,3 @@
-
 from fastapi import FastAPI
 from langserve import add_routes
 
@@ -12,12 +11,13 @@ app = FastAPI(
 add_routes(
     app,
     agent,
-    path="/",
+    path="/agent",
+    playground_type="default",
 )
 
 @app.get("/")
 def home():
     return {
         "status": "running",
-        "service": "Internet History Agent"
+        "service": "Internet History Agent",
     }
